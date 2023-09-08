@@ -1,4 +1,4 @@
-import classes from "./Header.module.css";
+import classes from "./header.module.css";
 import meals from "../../assets/meals.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 
