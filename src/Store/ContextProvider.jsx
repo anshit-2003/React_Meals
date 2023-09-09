@@ -34,7 +34,6 @@ const reducer = (state, action) => {
                     totalAmount: updatedTotalAmount,
                 };
             }
-
         }
         case "REMOVE": {
             const existingCartItemIndex = state.items.findIndex(
@@ -60,6 +59,9 @@ const reducer = (state, action) => {
                 totalAmount: updatedTotalAmount,
             };
         }
+        case "CLEAR": {
+            return defaultcartState;
+        }
         default:
             return state;
     }
@@ -76,6 +78,9 @@ export default function ContextProvider({ children }) {
     const removeItem = (id) => {
         dispatch({ type: "REMOVE", id: id });
     };
+    const clearCart = () => {
+        dispatch({ type: "CLEAR" });
+    };
 
     //Context
     const context = {
@@ -83,6 +88,7 @@ export default function ContextProvider({ children }) {
         totalAmount: cartState.totalAmount,
         addItem: addItem,
         removeItem: removeItem,
+        clearCart: clearCart,
     };
     return (
         <cartContext.Provider value={context}>{children}</cartContext.Provider>
