@@ -51,7 +51,7 @@
 
 .actions .submit:hover,
 .actions .submit:active {
-  xw
+  background-color: #7a2706;
 }
 
 .invalid label {
