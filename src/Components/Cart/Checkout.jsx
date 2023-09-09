@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useContext } from "react";
-import classes from "./Checkout.module.css";
+import classes from "./checkout.module.css";
 import cartContext from "../../Store/Context";
 import Success from "./success.jsx";
 
